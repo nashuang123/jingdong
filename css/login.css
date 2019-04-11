@@ -1,0 +1,359 @@
+body{
+    background: #fff;
+}
+.login_top{
+    height:80px;
+    width:990px;
+    margin: 0 auto;
+}
+.login_logo {
+    margin-top: 15px;
+    overflow: hidden;
+    width:295px;
+    float: left;
+   
+}
+.diaocha{
+    float: right;
+    margin-top: 55px;
+}
+.diaocha a{
+    color: #999;
+}
+.login_logo span{
+    display: inline-block;
+    float: right;
+   margin-top: 22px;
+
+
+}
+.login_1{
+    width:100%;
+    height:40px;
+    background: #fff8f0;
+    line-height: 40px;
+    float: left;
+}
+.login_1 p{
+    line-height: 40px;
+   margin: 0 auto;
+    width:800px;
+    color: #999;
+}
+.login_1 i{
+    display: inline-block;
+    width:16px;
+    height:16px;
+    background: url(../img/i.jpg);
+    float: left;
+    margin-top: 12px;
+    margin-right: 5px;
+}
+.login_wrap{
+    width:100%;
+    height:475px;
+    background: #e93854;
+    float: left;
+}
+.login_bg{
+    width:990px;
+    height:100%;
+    background: url(../img/login_bg.jpg);
+    margin: 0 auto;
+}
+
+
+
+#login{
+    width:346px;
+    min-height: 400px;
+    /*border:1px solid #000;*/
+    background: #fff;
+    font-family: arial,sans-serif;
+    overflow: hidden;
+    float: right;
+    margin-top: 10px;
+}
+.login_header{
+    height:39px;
+    background: #fff8f0;
+    
+}
+.login_header p{
+    text-align: center;
+    line-height: 39px;
+    font-size: 12px;
+    color:#999;
+    width:284px;
+    margin: 0 auto;
+}
+.login_header i{
+     display: inline-block;
+    width:16px;
+    height:16px;
+    background: url(../img/i.jpg);
+    float: left;
+    margin-top: 10px;
+    margin-right: 4px;
+}
+.login1,.login2{
+    width:173px;
+    height:55px;
+    float: left;
+   border-bottom: 1px solid #f4f4f4;
+}
+.login1 b:hover,.login2 b:hover{
+    cursor: pointer;
+}
+.login_a{
+    font-size: 18px;
+    display: inline-block;
+     width:110px;
+    height:55px;
+    line-height: 55px;
+    margin-left: 40px;
+    color: #666;
+    font-weight: 100;
+}
+.login_a:nth-of-type(1){
+    margin-left: 45px;
+}
+.login1 span{
+    display: inline-block;
+    margin-right: 1px;
+    color: #f4f4f4;
+}
+.information{
+    width:306px;
+    height:192px;
+    /*border:1px solid #000;*/
+    float: left;
+    margin:0 20px;
+
+}
+.wrap_warn{
+width:344px;
+height:33px;
+float: left;
+}
+#warn{
+    width:304px;
+    height:17px;
+    border:1px solid #faccc6;
+    background: #ffebeb;
+    padding: 3px 0;
+    margin: 5px 20px;
+    float: left;
+    display: none;
+}
+#warn em{
+    display: inline-block;
+    width:17px;
+    height:17px;
+    border-radius: 17px;
+    background: #e4393c;
+    color: #fff;
+    font-size: 32px;
+    text-align: center;
+    line-height: 12px;
+    font-weight: 700;
+    margin-left: 10px;
+    float: left;
+}
+#warn #warn_xinxi{
+    width:200px;
+    display: inline-block;
+    height:17px;
+    /*background: red;*/
+    float: left;
+    margin-left: 15px;
+    color: #e4393c;
+}
+.information_txt{
+    margin-bottom: 18px;
+}
+.information_txt,.information_pwd{
+    width:304px;
+    height:38px;
+    border:1px solid #bdbdbd;
+}
+.information_txt label{
+    display: inline-block;
+    background:url(../img/user.png);
+    background-position: 0 0px;
+    width:38px;
+    height:38px;
+     border-right:1px solid #bdbdbd;
+}
+.information_pwd label{
+    display: inline-block;
+    background:url(../img/user.png);
+    background-position: -48px 0px;
+    width:38px;
+    height:38px;
+     border-right:1px solid #bdbdbd;
+}
+#login_txt,#login_pwd{
+    width:265px;
+    height:38px;
+    border:none;
+    float: right;
+    text-indent: 10px;
+    font-size: 14px;
+}
+.information a{
+    display: inline-block;
+    float: right;
+    margin-top: 20px;
+}
+#btn{
+   width:304px;
+   height:33px;
+   background: #e4393c;
+   box-sizing: content-box;
+   border: 1px solid #e85356;
+   font-size: 20px;
+   color: #fff;
+   margin-top: 20px;
+   
+}
+.forget:hover{
+    color: #b61d1d;
+    text-decoration: underline;
+}
+.login_card1{
+    display: none;
+    margin-bottom: 30px;
+    float: left;
+}
+.ewm{
+    width:147px;
+    height:147px;
+    float: left;
+    border:1px solid #f4f4f4;
+    padding:9px 13px;
+    margin: 30px 0 0 85px;
+}
+.login_card2{
+    height:293px;
+    float: left;
+    /*display: none;*/
+}
+.login_card2 p{
+    float: left;
+    width:346px;
+    text-align: center;
+    line-height: 1;
+    margin-top: 25px;
+    color: #666;
+}
+.sarfair{
+    float: left;
+    height:25px;
+    width:346px;
+    line-height: 25px;
+    text-align: center;
+    margin: 15px 0;
+}
+.sarfair span{
+    display: inline-block;
+    height:25px;
+    line-height: 25px;
+    margin-right: 17px;
+}
+.sarfair i{
+    display: inline-block;
+    float: left;
+    width:25px;
+    height:25px;
+    background: url(../img/sarfair.jpg);
+    margin-right: 5px;
+}
+.qq_weixin{
+    width:346px;
+    height:50px;
+    border-top:1px solid #f4f4f4;
+    float: left;
+    /*margin-top: 20px;*/
+    padding: 0 20px;
+    background: #fcfcfc;
+}
+.qq_weixin li{
+     /*height:50px;
+     line-height: 50px;*/
+     width:77px;
+     float: left;
+     margin-top: -4px;
+}
+.qq_weixin li:nth-of-type(2){
+    margin-left: 5px;
+}
+.qq_weixin li:nth-of-type(3){
+    float: right;
+    width:105px;
+    margin-right: 20px;
+
+}
+.qq_weixin li:nth-of-type(3) a{
+    width:90px;
+}
+.qq_weixin li:nth-of-type(3) em{
+    width:60px;
+    float: right;
+    color: #b61d1d;
+}
+.qq_weixin a{
+    width:56px;
+    height:50px;
+    display: inline-block;
+}
+.qq{
+    display: inline-block;
+    width:19px;
+    height:18px;
+    background: url(../img/QQ-weixin.png);
+    margin-top: 20px;
+    float: left;
+}
+.weixin{
+    display: inline-block;
+    width:19px;
+    height:18px;
+    background: url(../img/QQ-weixin.png);
+    background-position:-20px 0;
+    margin-top: 20px;
+    float: left;
+}
+.zhuce{
+    display: inline-block;
+    width:19px;
+    height:18px;
+    background: url(../img/user.png);
+    background-position:-101px -75px;
+    background-color: #fcfcfc;
+    margin-top: 20px;
+    float: left;
+}
+.qq_weixin em{
+    float: left;
+    display: inline-block;
+    margin-top: 18px;
+    font-size: 14px;
+    margin-left: 5px;
+    color: #666;
+}
+.qq_weixin strong{
+    display: inline-block;
+    float: right;
+    margin-right: 15px;
+    font-weight: 100;
+    margin-top: 20px;
+    color: #ccc;
+}
+.qq_weixin a:hover em{
+    text-decoration: underline;
+    color: #E4393C;
+}
+.qq_weixin li:nth-of-type(3) a:hover em{
+     color: #b61d1d;
+}

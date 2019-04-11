@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>京东-欢迎登录</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div class="login_top">
+        <div class="login_logo">
+            <a href=""><img src="img/login_logo.jpg" alt=""></a>
+            <span><img src="img/denglu.jpg" alt=""></span>
+        </div>
+        <div class="diaocha">
+            <span><img src="img/diaocha.jpg" alt=""></span>
+            <a href="">登录页面，调查问卷</a>
+        </div>
+    </div>
+    <div class="login_1">
+        <p><i></i>依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版<a href="">《京东隐私政策》</a>已上线，将更有利于保护您的个人隐私。</p>
+    </div>
+    <div class="login_wrap">
+        <div class="login_bg">
+            <div id="login">
+        <div class="login_header">
+            <p><i></i>京东不会以任何理由要求您转账汇款，谨防诈骗。</p>
+        </div>
+        <div class="login1">
+            <b class="login_a" style="color: #e4393c;font-weight: 600">扫码登录</b>
+            <span>|</span>
+        </div>
+
+        <div class="login2">
+            <b class="login_a">账户登录</b>
+        </div>
+        <div class="login_card1">
+            <div class="wrap_warn">
+                <div id="warn">
+                    <em>-</em>
+                    <span id="warn_xinxi"></span>
+                </div>
+            </div>
+            <div class="information">
+                <div class="information_txt">
+                    <label for="login_txt"></label>
+                    <input id="login_txt" type="text" placeholder="邮箱/用户名/已验证手机">
+                </div>
+                <div class="information_pwd">
+                    <label for="login_pwd"></label>
+                    <input id="login_pwd" type="password" placeholder="密码">
+                </div>
+                <a class="forget" href="">忘记密码</a>
+                <div class="information_btn">
+                    <input id="btn" type="button" value="登&nbsp;&nbsp;&nbsp;录">
+                </div>
+            </div>
+        </div>
+        <div class="login_card2">
+            <div class="ewm">
+                <img src="img/ewm.jpg" alt="">
+            </div>
+            <p>打开<a href="" style="color: #e4393c">手机京东</a> &nbsp;&nbsp;扫描二维码</p>
+            <div class="sarfair">
+                <span><i></i>免输入</span>
+                <span><i style="background-position: -27px 0"></i>更快</span>
+                <span><i style="background-position: -54px 0"></i>更安全</span>
+            </div>
+        </div>
+        <ul class="qq_weixin">
+            <li>
+                <a href=""><span class="qq"></span><em>QQ</em></a><strong>|</strong>
+            </li>
+            <li> <a href=""><span class="weixin"></span><em>微信</em></a></li>
+            <li>
+                <a href=""><span class="zhuce"></span><em>立即注册</em></a>
+            </li>
+        </ul>
+        </div>
+
+    </div>
+    <footer>
+        <p style="margin-top: 20px;color: #666">
+					<a href="">关于我们</a>
+					<span>|</span>
+					<a href="">联系我们</a>
+					<span>|</span>
+					<a href="">人才招聘</a>
+					<span>|</span>
+					<a href="">商家入驻</a>
+					<span>|</span>
+					<a href="">广告服务</a>
+					<span>|</span>
+					<a href="">手机京东</a>
+					<span>|</span>
+					<a href="">友情链接</a>
+					<span>|</span>
+					<a href="">销售联盟</a>
+					<span>|</span>
+					<a href="">京东社区</a>
+					<span>|</span>
+					<a href="">京东公益</a>
+					<span>|</span>
+					<a href="">English Site</a>
+				</p>
+                <p style="margin: 10px 0;color: #666">
+            Copyright &copy; 2004-2019  京东JD.com 版权所有
+        </p>
+    </footer>
+        
+
+    </div>
+    <script>
+        var login_txt = document.getElementById("login_txt");
+        var login_pwd = document.getElementById("login_pwd");
+        var btn = document.getElementById("btn");
+        var warn_xinxi = document.getElementById("warn_xinxi");
+        var warn = document.getElementById("warn");
+        var login = document.getElementsByClassName("login_a");
+        var login1 = document.getElementsByClassName("login_card1")[0];
+        var login2 = document.getElementsByClassName("login_card2")[0];
+        login_txt.onfocus = function () {
+            this.previousElementSibling.style.backgroundPosition = "0 -48px"
+        }
+        login_pwd.onfocus = function () {
+            this.previousElementSibling.style.backgroundPosition = "-48px -48px";
+        }
+        login_txt.onblur = function () {
+            this.previousElementSibling.style.backgroundPosition = "0 0";
+        }
+        login_pwd.onblur = function () {
+            this.previousElementSibling.style.backgroundPosition = "-48px 0";
+        }
+        btn.onclick = function () {
+            var ajax = new XMLHttpRequest;
+            ajax.open("post", "php/login.php", true);
+            ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            ajax.send("user=" + login_txt.value + "&pwd=" + login_pwd.value);
+            ajax.onreadystatechange = function () {
+                if (ajax.status === 200 && ajax.readyState === 4) {
+                    var data = JSON.parse(ajax.responseText);
+                    if (data.code === 0) {
+                        warn.style.display = "block";
+                        warn_xinxi.innerHTML = "请输入正确的用户名！";
+                        login_txt.previousElementSibling.style.backgroundPosition = "0 -96px";
+                        login_pwd.previousElementSibling.style.backgroundPosition = "-48px -96px";
+                    }
+                    else if (data.code === 1) {
+                        warn.style.display = "block";
+                        warn_xinxi.innerHTML = "请输入正确的密码！"
+                    }
+                    else {
+                        var d = new Date();
+                        d.setDate(d.getDate() + 7);
+                        document.cookie = "username=" + login_txt.value + ";expires=" + d.toGMTString();
+                        warn.style.display = "none";
+                        window.location.href = "index.html";
+                    }
+                }
+            }
+        }
+        login[0].onclick = function () {
+            login[0].style.color = "#e4393c";
+            login[0].style.fontWeight = 600;
+            login[1].style.color = "#666";
+            login[1].style.fontWeight = 100;
+            login1.style.display = "none";
+            login2.style.display = "block";
+        }
+        login[1].onclick = function () {
+            login[1].style.color = "#e4393c";
+            login[1].style.fontWeight = 600;
+            login[0].style.color = "#666";
+            login[0].style.fontWeight = 100;
+            login2.style.display = "none";
+            login1.style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>

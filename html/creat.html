@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人注册</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/creat.css">
+</head>
+
+<body>
+    <div class="creat_fixed">
+        <a href=""></a>
+    </div>
+    <div class="login_wrap">
+        <div class="login_top">
+            <div class="login_logo">
+                <a href=""><img src="../img/login_logo.jpg" alt=""></a>
+                <span><img src="../img/denglu.jpg" alt=""></span>
+            </div>
+            <div class="diaocha">
+                <span>已有账号？</span>
+                <a href="../login.html">请登录 ></a>
+            </div>
+        </div>
+    </div>
+    <div class="contain">
+        <div class="contain_wrap">
+            <div class="contain_top">
+                <div class="step1">
+                    <span id="step1">1</span>
+                    <p>验证手机号</p>
+                </div>
+                <div class="zhi">
+
+                </div>
+                <div class="step2">
+                    <span id="step2">2</span>
+                    <p>填写账号信息</p>
+                </div>
+                <div class="zhi" style="margin-left: -10px;">
+
+                </div>
+                <div class="step3">
+                    <span id="step3">3</span>
+                    <p>注册成功</p>
+                </div>
+            </div>
+            <div class="contain_new" style="display: block">
+                <div class="contain_phone">
+                    <label for="con_txt">中国 0086<i class="iconfont">&#xe62d;</i></label>
+                    <input type="text" id="con_txt" value="">
+                    <div class="tishi"><i></i><p id="creat_phone">请输入手机号</p></div>
+                </div>
+                <div class="sure" style="display: block">
+                    点击按钮进行验证
+                </div>
+                <div class="sure1">
+                    <label for="yanzheng">验证码：</label><input type="text" id="yanzheng"/><div id="box"></div>
+			<a id="aa" href="">看不清楚？换张图片</a>
+                </div>
+                <input type="button" class="next" value="下一步">
+            </div>
+             <div class="contain_new1" style="display: none">
+                 <div class="xinxi">
+                    <div class="xinxi1">请输入用户名！</div>
+                 </div>
+                 <div class="yhm">
+                     <label for="name_txt">用&nbsp;&nbsp;户&nbsp;&nbsp;名：</label>
+                <input type="text" id="name_txt" value="">
+                 </div>
+               <div class="mima" style="margin: 5px 0">
+                 <label for="pwd1">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+                <input type="password" id="pwd1" value="">
+               </div>
+               <div class="qrmm">
+                 <label for="pwd2">确认密码：</label>
+                <input type="password" id="pwd2" value="">
+               </div>
+                
+                <input type="button" class="next1" value="下一步">
+            </div>
+            <div class="contain_new2" style="display: none">
+               <p>恭喜您已注册成功!</p>
+               <span>去<a href="../login.html">登录</a></span>
+            </div>
+            <div class="con_bottom">
+                <a href=""><i></i>企业用户注册</a><a href="" style="float: right"><i style="background-position: -40px -160px"></i>国际站注册</a>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <p style="margin-top: 20px;color: #666">
+					<a href="">关于我们</a>
+					<span>|</span>
+					<a href="">联系我们</a>
+					<span>|</span>
+					<a href="">人才招聘</a>
+					<span>|</span>
+					<a href="">商家入驻</a>
+					<span>|</span>
+					<a href="">广告服务</a>
+					<span>|</span>
+					<a href="">手机京东</a>
+					<span>|</span>
+					<a href="">友情链接</a>
+					<span>|</span>
+					<a href="">销售联盟</a>
+					<span>|</span>
+					<a href="">京东社区</a>
+					<span>|</span>
+					<a href="">京东公益</a>
+					<span>|</span>
+					<a href="">English Site</a>
+				</p>
+                <p style="margin: 10px 0;color: #666">
+            Copyright &copy; 2004-2019  京东JD.com 版权所有
+        </p>
+    </footer>
+
+    <script>
+        var sure=document.getElementsByClassName("sure")[0];
+        var sure1=document.getElementsByClassName("sure1")[0];
+        var con_txt=document.getElementById("con_txt");
+        var creat=document.getElementById('creat_phone');
+        var next=document.getElementsByClassName("next")[0];
+        var tishi=document.getElementsByClassName("tishi")[0];
+        var yanzheng=document.getElementById("yanzheng");
+		var box=document.getElementById("box");
+		var aa=document.getElementById("aa");
+        var step3=document.getElementById("step3");
+        var step1=document.getElementById("step1");
+        var step2=document.getElementById("step2");
+        var contain_new1=document.getElementsByClassName("contain_new1")[0];
+        var contain_new=document.getElementsByClassName("contain_new")[0];
+        fn();
+			aa.onclick=function(ev){
+				ev.preventDefault();
+				fn();
+				}
+				function fn(){
+						var arr=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9"];
+						var str="";
+					for(var i=0;i<6;i++){
+							str+=arr[parseInt(36*Math.random())];
+					}
+					box.innerHTML=str;
+				}
+                 next.onclick=function(){
+            var telreg=/^1(3|4|5|7|8)\d{9}$/;
+				res=telreg.test(con_txt.value);
+            if(con_txt.value===""){
+               tishi.style.display="block";
+            }else if(!res){
+                tishi.style.display="block";
+               creat.innerText="请输入正确手机号";
+            }else if(sure.style.display==="block"){
+                 tishi.style.display="block";
+            creat.innerText="请点击验证！"
+        } else if(yanzheng.value!==box.innerText){
+             tishi.style.display="block";
+                creat.innerText="验证码错误！"
+            }
+          else{
+              step1.style.backgroundPosition="0 0";
+              step1.innerHTML="";
+              step2.style.backgroundPosition="0 -200px";
+              step2.style.color="#fff";
+              step2.nextElementSibling.style.color="#33bb44";
+              contain_new.style.display="none";
+              contain_new1.style.display="block";
+          } 
+        }
+        sure.onclick=function(){
+            this.style.display="none";
+            sure1.style.display="block";
+
+        }
+
+
+        var name_txt=document.getElementById("name_txt");
+        var pwd1=document.getElementById("pwd1");
+        var pwd2=document.getElementById("pwd2");
+        var next1=document.getElementsByClassName("next1")[0];
+        var xinxi1=document.getElementsByClassName("xinxi1")[0];
+        var contain_new2=document.getElementsByClassName("contain_new2")[0];
+        next1.onclick=function(){
+            if(name_txt.value===""){
+                xinxi1.style.display="block";
+            }else if(pwd1.value===""){
+                xinxi1.style.display="block";
+                xinxi1.innerHTML="请输入密码！";
+            }else if(!/^[a-zA-Z0-9]{6,16}$/.test((pwd1.value))){
+                 xinxi1.style.display="block";
+                xinxi1.innerHTML="请输入6-16位字符！"
+            }else if(pwd2.value===""){
+                 xinxi1.style.display="block";
+                xinxi1.innerHTML="请确认密码！";
+            }else if(pwd2.value!==pwd1.value){
+                xinxi1.style.display="block";
+                xinxi1.innerHTML="请重新确认密码！";
+            }else{
+              step2.style.backgroundPosition="0 0";
+              step2.innerHTML="";
+              step3.style.backgroundPosition="0 -200px";
+              step3.style.color="#fff";
+              step3.nextElementSibling.style.color="#33bb44";
+              contain_new1.style.display="none";
+              contain_new2.style.display="block";
+            }
+        }
+    </script>
+</body>
+
+</html>
